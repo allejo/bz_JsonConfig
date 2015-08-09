@@ -25,7 +25,7 @@ THE SOFTWARE.
 #include <sstream>
 
 #include "bz_JsonConfig.h"
-#include "JsonObject.h"
+#include "JsonObject/JsonObject.h"
 
 bz_JsonConfig::bz_JsonConfig() {}
 
@@ -34,7 +34,7 @@ std::string bz_JsonConfig::readFile (const char *filePath)
     std::ifstream t(filePath);
     std::stringstream buffer;
     buffer << t.rdbuf();
-    
+
     return buffer.str();
 }
 
